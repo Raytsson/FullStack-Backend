@@ -1,14 +1,14 @@
 package raytsson.fullstackbackend.domain;
 
-public enum Perfil {
-    ADMIN(0, "ROLE_ADMIN"),
-    CLIENTE(1, "ROLE_CLIENTE"),
-    TECNICO(2, "ROLE_TECNICO");
+public enum Prioridade {
+    BAIXA(0, "ROLE_BAIXA"),
+    MEDIA(1, "ROLE_MEDIA"),
+    ALTA(2, "ROLE_ALTA");
 
     private Integer Codigo;
     private String descricao;
 
-    Perfil(Integer codigo, String descricao) {
+    Prioridade(Integer codigo, String descricao) {
         Codigo = codigo;
         this.descricao = descricao;
     }
@@ -21,15 +21,15 @@ public enum Perfil {
         return descricao;
     }
 
-    public static Perfil toEnum(Integer cod){
+    public static Prioridade toEnum(Integer cod){
         if (cod ==null){
             return null;
         }
-        for (Perfil x : Perfil.values()){
+        for (Prioridade x : Prioridade.values()){
             if (cod.equals(x.getCodigo())) {
                 return x;
             }
         }
-        throw new IllegalArgumentException("Perfil Invalido");
+        throw new IllegalArgumentException("Prioridade Invalido");
     }
 }
