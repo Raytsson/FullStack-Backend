@@ -1,4 +1,4 @@
-package raytsson.fullstackbackend.domain;
+package raytsson.fullstackbackend.domain.enums;
 
 public enum Status {
     ABERTO(0, "ROLE_ABERTO"),

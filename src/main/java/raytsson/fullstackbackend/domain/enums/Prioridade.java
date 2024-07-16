@@ -1,4 +1,4 @@
-package raytsson.fullstackbackend.domain;
+package raytsson.fullstackbackend.domain.enums;
 
 public enum Prioridade {
     BAIXA(0, "ROLE_BAIXA"),

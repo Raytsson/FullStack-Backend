@@ -1,4 +1,4 @@
-package raytsson.fullstackbackend.domain;
+package raytsson.fullstackbackend.domain.enums;
 
 public enum Perfil {
     ADMIN(0, "ROLE_ADMIN"),
