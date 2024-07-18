@@ -1,5 +1,6 @@
 package raytsson.fullstackbackend.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import raytsson.fullstackbackend.domain.enums.Perfil;
 
 import javax.persistence.Entity;
@@ -10,6 +11,7 @@ import java.util.List;
 public class Tecnico extends Pessoa{
     private static final long serialVersionUID = 1L;
     @OneToMany(mappedBy = "tecnico")
+    @JsonIgnore
     private List<Chamado> chamados = new ArrayList<>();
 
     public Tecnico() {
