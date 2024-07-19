@@ -1,0 +1,59 @@
+[33mcommit 4a71f58565325a48da784fc805a952310f6d2be0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: raytsson <raytssonmoraes@hotmail.com>
+Date:   Fri Jul 19 15:18:23 2024 -0300
+
+    excecao para objeto nao encontrado
+
+[33mcommit 6468f63530730bb9bc666bd7a351f2489a41340c[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: raytsson <raytssonmoraes@hotmail.com>
+Date:   Thu Jul 18 17:09:36 2024 -0300
+
+    Padrao DTO para tecnico
+
+[33mcommit c4473e5c595ece781eb1ac7f431e3c141fb15bc4[m
+Author: raytsson <raytssonmoraes@hotmail.com>
+Date:   Thu Jul 18 15:54:48 2024 -0300
+
+    endpoint findById e correção de serializacao para tecnico
+
+[33mcommit f3e2e21d216e064a6f0e5cf73a2226c68d1178cd[m
+Author: raytsson <raytssonmoraes@hotmail.com>
+Date:   Thu Jul 18 15:30:40 2024 -0300
+
+    perfil de desenvolvimento
+
+[33mcommit 7b807a741fa5194caabfc32a8584846af75b0cb7[m
+Author: raytsson <raytssonmoraes@hotmail.com>
+Date:   Thu Jul 18 14:42:09 2024 -0300
+
+    Perfil de teste criado
+
+[33mcommit 31569dd179838e32abb2f5ca6ca890061e970706[m
+Author: raytsson <raytssonmoraes@hotmail.com>
+Date:   Tue Jul 16 17:04:56 2024 -0300
+
+    Repositories criados e configuracao do aplication.properties
+
+[33mcommit cd2d513a182bb493d9804ca6fa37831853bafbd5[m
+Author: raytsson <raytssonmoraes@hotmail.com>
+Date:   Tue Jul 16 15:57:55 2024 -0300
+
+    anotacoes JPA para as classes de dominio
+
+[33mcommit 61065abab7a44b852b032559cf7c2c197571baa8[m
+Author: raytsson <raytssonmoraes@hotmail.com>
+Date:   Mon Jul 15 18:12:22 2024 -0300
+
+    Classe de dominio iniciadas
+
+[33mcommit 0dd15fe8c144fe024507dde1d6366c86ce9093c2[m
+Author: raytsson <raytssonmoraes@hotmail.com>
+Date:   Mon Jul 15 15:23:25 2024 -0300
+
+    criado o enum do projeto
+
+[33mcommit 5c2735e65de1f688445369a516c9a7b585e20406[m
+Author: raytsson <raytssonmoraes@hotmail.com>
+Date:   Mon Jul 15 14:50:05 2024 -0300
+
+    Inicio do projeto backend fullstack
