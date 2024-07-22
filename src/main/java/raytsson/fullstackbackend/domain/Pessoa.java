@@ -19,8 +19,8 @@ public abstract class  Pessoa implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Integer id;
     protected String nome;
-    @Column(unique = true)
     @CPF
+    @Column(unique = true)
     protected String cpf;
     @Column(unique = true)
     protected String email;
