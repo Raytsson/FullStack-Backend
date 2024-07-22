@@ -8,6 +8,7 @@ import raytsson.fullstackbackend.domain.Tecnico;
 import raytsson.fullstackbackend.dto.TecnicoDTO;
 import raytsson.fullstackbackend.services.TecnicoService;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -33,7 +34,7 @@ public class TecnicoResource {
     }
 
     @PostMapping
-    public ResponseEntity<TecnicoDTO> create(@RequestBody TecnicoDTO objDto){
+    public ResponseEntity<TecnicoDTO> create(@Valid @RequestBody TecnicoDTO objDto){
         Tecnico newObj = service.create(objDto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(newObj.getId()).toUri();
         return ResponseEntity.created(uri).build();

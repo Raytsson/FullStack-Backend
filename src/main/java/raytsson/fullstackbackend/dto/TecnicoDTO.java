@@ -6,6 +6,7 @@ import raytsson.fullstackbackend.domain.Tecnico;
 import raytsson.fullstackbackend.domain.enums.Perfil;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -14,12 +15,17 @@ import java.util.stream.Collectors;
 
 public class TecnicoDTO implements Serializable {
     private static final long serialVersionUID = 1L;
-    protected Integer id;
-    protected String nome;
-    protected String cpf;
 
+    protected Integer id;
+    @NotNull(message = "O campo nome é requerido!")
+    protected String nome;
+    @NotNull(message = "O campo cpf é requerido!")
+    protected String cpf;
+    @NotNull(message = "O campo email é requerido!")
     protected String email;
+    @NotNull(message = "O campo senha é requerido!")
     protected String senha;
+
     protected Set<Integer> perfis =  new HashSet<>();
     @JsonFormat(pattern = "dd/MM/yyyy")
     protected LocalDate dataCriacao = LocalDate.now();
