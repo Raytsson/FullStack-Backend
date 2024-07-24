@@ -10,6 +10,10 @@ import raytsson.fullstackbackend.domain.Chamado;
 import raytsson.fullstackbackend.dto.ChamadoDTO;
 import raytsson.fullstackbackend.services.ChamadoService;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RestController
 @RequestMapping(value = "/chamados")
 public class ChamadoResource {
@@ -22,4 +26,11 @@ public class ChamadoResource {
         Chamado obj = chamadoService.findById(id);
         return ResponseEntity.ok().body(new ChamadoDTO());
     }
+
+    @GetMapping
+    public ResponseEntity<List<ChamadoDTO>> findAll(){
+        List<Chamado> list = chamadoService.findAll();
+        List<ChamadoDTO> listDTO = list.stream().map(obj -> new ChamadoDTO()).collect(Collectors.toList());
+        return ResponseEntity.ok().body(listDTO);
+     }
 }

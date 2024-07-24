@@ -6,6 +6,7 @@ import raytsson.fullstackbackend.domain.Chamado;
 import raytsson.fullstackbackend.repositories.ChamadoRepository;
 import raytsson.fullstackbackend.services.exceptions.ObjectNotFoundException;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -17,5 +18,9 @@ public class ChamadoService {
     public Chamado findById(Integer id) {
         Optional<Chamado> obj = chamadoRepository.findById(id);
         return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! " + id));
+    }
+
+    public List<Chamado> findAll(){
+        return chamadoRepository.findAll();
     }
 }
