@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import raytsson.fullstackbackend.domain.Cliente;
-import raytsson.fullstackbackend.dto.ClienteDTO;
+import raytsson.fullstackbackend.domain.dto.ClienteDTO;
 import raytsson.fullstackbackend.services.ClienteService;
 
 

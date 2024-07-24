@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import raytsson.fullstackbackend.domain.Tecnico;
-import raytsson.fullstackbackend.dto.TecnicoDTO;
+import raytsson.fullstackbackend.domain.dto.TecnicoDTO;
 import raytsson.fullstackbackend.services.TecnicoService;
 
 import javax.validation.Valid;

@@ -1,9 +1,11 @@
-package raytsson.fullstackbackend.dto;
+package raytsson.fullstackbackend.domain.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import raytsson.fullstackbackend.domain.Cliente;
+import org.hibernate.validator.constraints.br.CPF;
+import raytsson.fullstackbackend.domain.Tecnico;
 import raytsson.fullstackbackend.domain.enums.Perfil;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -11,7 +13,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class ClienteDTO implements Serializable {
+public class TecnicoDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 
     protected Integer id;
@@ -28,10 +30,10 @@ public class ClienteDTO implements Serializable {
     @JsonFormat(pattern = "dd/MM/yyyy")
     protected LocalDate dataCriacao = LocalDate.now();
 
-    public ClienteDTO() {
+    public TecnicoDTO() {
         addPerfil(Perfil.CLIENTE);
     }
-    public ClienteDTO(Cliente obj) {
+    public TecnicoDTO(Tecnico obj) {
         this.id = obj.getId();
         this.nome = obj.getNome();
         this.cpf = obj.getCpf();

@@ -2,7 +2,7 @@ package raytsson.fullstackbackend.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import raytsson.fullstackbackend.domain.enums.Perfil;
-import raytsson.fullstackbackend.dto.TecnicoDTO;
+import raytsson.fullstackbackend.domain.dto.TecnicoDTO;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;

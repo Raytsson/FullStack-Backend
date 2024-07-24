@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import raytsson.fullstackbackend.domain.Pessoa;
 import raytsson.fullstackbackend.domain.Tecnico;
-import raytsson.fullstackbackend.dto.TecnicoDTO;
+import raytsson.fullstackbackend.domain.dto.TecnicoDTO;
 import raytsson.fullstackbackend.repositories.PessoaRepository;
 import raytsson.fullstackbackend.repositories.TecnicoRepository;
 import raytsson.fullstackbackend.services.exceptions.DataIntegrityViolationException;
