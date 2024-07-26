@@ -1,15 +1,14 @@
 package raytsson.fullstackbackend.security;
+import java.util.Collection;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import raytsson.fullstackbackend.domain.enums.Perfil;
 
-import java.util.Collection;
-import java.util.Set;
-import java.util.stream.Collectors;
 
-//contratos utilizados para autenticação
 public class UserSS implements UserDetails {
     private static final long serialVersionUID = 1L;
 
@@ -19,6 +18,7 @@ public class UserSS implements UserDetails {
     private Collection<? extends GrantedAuthority> authorities;
 
     public UserSS(Integer id, String email, String senha, Set<Perfil> perfis) {
+        super();
         this.id = id;
         this.email = email;
         this.senha = senha;
@@ -46,21 +46,22 @@ public class UserSS implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
     }
+
 }

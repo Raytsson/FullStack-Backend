@@ -1,6 +1,6 @@
 package raytsson.fullstackbackend.domain.dto;
 
-public class CredenciasDTO {
+public class CredenciaisDTO {
 
     private String email;
     private String senha;

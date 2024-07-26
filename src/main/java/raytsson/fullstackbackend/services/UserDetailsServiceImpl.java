@@ -1,5 +1,7 @@
 package raytsson.fullstackbackend.services;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -9,10 +11,9 @@ import raytsson.fullstackbackend.domain.Pessoa;
 import raytsson.fullstackbackend.repositories.PessoaRepository;
 import raytsson.fullstackbackend.security.UserSS;
 
-import java.util.Optional;
 
 @Service
-public class UserDetailServiceImpl implements UserDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService{
 
     @Autowired
     private PessoaRepository repository;
@@ -20,9 +21,10 @@ public class UserDetailServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         Optional<Pessoa> user = repository.findByEmail(email);
-        if (user.isPresent()) {
-            return new UserSS(user.get().getId(),user.get().getEmail(),user.get().getSenha(), user.get().getPerfis());
+        if(user.isPresent()) {
+            return new UserSS(user.get().getId(), user.get().getEmail(), user.get().getSenha(), user.get().getPerfis());
         }
         throw new UsernameNotFoundException(email);
     }
+
 }
