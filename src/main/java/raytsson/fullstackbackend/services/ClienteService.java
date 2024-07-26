@@ -1,6 +1,7 @@
 package raytsson.fullstackbackend.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import raytsson.fullstackbackend.domain.Pessoa;
 import raytsson.fullstackbackend.domain.Cliente;
@@ -20,6 +21,8 @@ public class ClienteService {
     private ClienteRepository repository;
     @Autowired
     private PessoaRepository pessoaRepository;
+    @Autowired
+    private BCryptPasswordEncoder encoder;
 
     public Cliente findById(Integer id) {
         Optional<Cliente> obj = repository.findById(id);
@@ -32,6 +35,7 @@ public class ClienteService {
 
     public Cliente create(ClienteDTO objDto) {
         objDto.setId(null); // assegurar que o id vai vir null
+        objDto.setSenha(encoder.encode(objDto.getSenha()));
         validaPorCPfeEmail(objDto);
         Cliente newObj = new Cliente(objDto);
         return repository.save(newObj);

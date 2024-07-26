@@ -1,6 +1,7 @@
 package raytsson.fullstackbackend.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import raytsson.fullstackbackend.domain.Chamado;
 import raytsson.fullstackbackend.domain.Cliente;
@@ -22,11 +23,13 @@ public class DBService {
     private ClienteRepository clienteRepository;
     @Autowired
     private ChamadoRepository chamadoRepository;
+    @Autowired
+    private BCryptPasswordEncoder encoder;
 
     public void instanciaDB(){
-        Tecnico t1 = new Tecnico(null, "Valdir", "38277036892", "valdir@email.com", "123");
+        Tecnico t1 = new Tecnico(null, "Valdir", "38277036892", "valdir@email.com", encoder.encode("123"));
 
-        Cliente c1 =  new Cliente(null, "teste do teste", "27244634803", "teste@email.com", "1234");
+        Cliente c1 =  new Cliente(null, "teste do teste", "27244634803", "teste@email.com", encoder.encode("123"));
 
         Chamado ch1 = new Chamado(null, Prioridade.MEDIA, Status.ANDAMENTO, "Chamado 01", "Primeiro chamado", t1, c1);
 
