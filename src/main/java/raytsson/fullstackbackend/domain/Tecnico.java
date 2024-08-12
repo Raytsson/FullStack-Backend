@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 @Entity
 public class Tecnico extends Pessoa{
     private static final long serialVersionUID = 1L;
+
     @OneToMany(mappedBy = "tecnico")
     @JsonIgnore
     private List<Chamado> chamados = new ArrayList<>();

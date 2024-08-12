@@ -20,6 +20,7 @@ public class TecnicoDTO implements Serializable {
     @NotNull(message = "O campo nome é requerido!")
     protected String nome;
     @NotNull(message = "O campo cpf é requerido!")
+    @CPF
     protected String cpf;
     @NotNull(message = "O campo email é requerido!")
     protected String email;
