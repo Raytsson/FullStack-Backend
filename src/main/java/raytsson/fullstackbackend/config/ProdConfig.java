@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Profile;
 import raytsson.fullstackbackend.services.DBService;
 
 @Configuration
-@Profile({"dev"})
-public class DevConfig {
+@Profile({"prod"})
+public class ProdConfig {
 
     @Autowired
     private DBService dbService;
